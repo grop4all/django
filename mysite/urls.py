@@ -20,5 +20,6 @@ from crm import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.main_page)
+    path('<int:order_id>/', views.main_page),
+    path('order_page/', views.order_page, name='order_page')
 ]
